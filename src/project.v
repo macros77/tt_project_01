@@ -16,6 +16,8 @@ module tt_um_macros77_bcd (
     input  wire       rst_n     // reset_n - low to reset
 );
 
+  wire reset = ! rst_n;
+	
   reg [11:0] bcd = 0;
   reg [3:0] counter = 0;
     
@@ -38,7 +40,8 @@ module tt_um_macros77_bcd (
   end    
 
   always @(posedge clk) begin
-      counter <= counter + 1;
+    if (reset) counter <= 0;
+    else counter <= counter + 1;
   end
 
 endmodule
