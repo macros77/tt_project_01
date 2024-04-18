@@ -18,6 +18,8 @@ module tt_um_macros77_bcd (
 
   reg [11:0] bcd = 0;
   reg [3:0] counter = 0;
+
+  reg [7:0] memory [127:0];
     
   // All output pins must be assigned. If not used, assign to 0.
   assign uio_oe  = 1;
@@ -40,6 +42,7 @@ module tt_um_macros77_bcd (
 
   always @(posedge clk) begin
       counter <= counter + 1;
+      memory[counter] <= counter;
   end
 
 endmodule
