@@ -9,12 +9,9 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
-
-## How to test
-
-Explain how to use your project
+Decodes 8-bit input value to 12-bit output BCD value (three BCD-encoded digits)
+Additionally provides 4-bit counter connected to the main clock
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+3 external BCD to 7-segment decoders 
